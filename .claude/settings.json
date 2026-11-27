@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "description": "Claude Code settings for Manish Kumar's portfolio website project",
+  "permissions": {
+    "default": "allow",
+    "bq": "ask",
+    "aws": "ask",
+    "git": {
+      "push": "ask",
+      "force_push": "deny",
+      "delete_branch": "deny"
+    }
+  },
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "rules": {
+    "default": "ask"
+  },
+  "hooks": [
+    {
+      "trigger": "before-push",
+      "run": "npm run build && npm run preview",
+      "description": "Verify build succeeds before pushing to main"
+    }
+  ],
+  "codeReviewDefaults": {
+    "effort": "high",
+    "maxFindings": 10
+  },
+  "preferences": {
+    "responseStyle": "concise",
+    "codeStyle": "modern",
+    "documentationLevel": "balanced"
+  },
+  "allowlist": [
+    "git status",
+    "git log",
+    "npm list",
+    "npm run dev",
+    "npm run build",
+    "npm run preview",
+    "ls",
+    "find",
+    "grep"
+  ]
+}
