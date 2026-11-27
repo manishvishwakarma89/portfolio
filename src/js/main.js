@@ -172,12 +172,12 @@ function loadSkills() {
   if (!skillsGrid) return;
 
   const skills = {
-    'Cloud Platforms': ['AWS', 'Azure', 'Google Cloud', 'DigitalOcean'],
-    'DevOps Tools': ['Docker', 'Kubernetes', 'Terraform', 'Ansible', 'Jenkins'],
-    'Languages': ['Python', 'Bash', 'JavaScript', 'Go', 'Java'],
-    'Databases': ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis'],
-    'CI/CD': ['GitHub Actions', 'GitLab CI', 'Jenkins', 'CircleCI'],
-    'Monitoring': ['Prometheus', 'Grafana', 'ELK Stack', 'New Relic']
+    'Cloud & Containers': ['AWS EC2', 'ECS', 'EKS', 'Docker', 'ECR', 'VPC'],
+    'Infrastructure as Code': ['Terraform', 'CloudFormation', 'Ansible', 'GitHub Actions'],
+    'Programming & Scripting': ['Python', 'Bash', 'PowerShell', 'Java (Spring Boot)'],
+    'Databases': ['PostgreSQL', 'MySQL', 'MongoDB', 'DynamoDB', 'Redis'],
+    'CI/CD & Monitoring': ['Jenkins', 'GitHub Actions', 'CloudWatch', 'Grafana', 'Prometheus'],
+    'Tools & Technologies': ['Kubernetes', 'Kafka', 'ArgoCD', 'Git', 'Linux', 'Langchain']
   };
 
   skillsGrid.innerHTML = '';
@@ -218,28 +218,28 @@ function loadExperience() {
 
   const experiences = [
     {
-      title: 'DevOps Engineer',
-      company: 'Tech Company XYZ',
-      period: '2023 - Present',
-      description: 'Leading cloud infrastructure initiatives, managing Kubernetes clusters, and implementing CI/CD pipelines'
+      title: 'DevOps / Cloud Infrastructure Consultant',
+      company: 'MSS Techlabs Pvt. Ltd., Mumbai',
+      period: 'Mar 2026 – Sep 2026',
+      description: 'Provisioned multi-tier AWS infrastructure with Terraform (VPC, subnets, security groups, ALB, EC2 Auto Scaling), reducing environment spin-up from days to 15 minutes. Containerized applications with Docker and deployed to AWS EKS via Jenkins (CI) and Argo CD (CD). Set up Grafana dashboards with Prometheus monitoring. Configured Kubernetes HPA to auto-scale pods handling 3× traffic spikes. Deployed Traklead API (Spring Boot, Kafka, Redis) and AkiraShop (Node, React, MongoDB) with automated rollback on health-check failure.'
     },
     {
-      title: 'Cloud Engineer',
-      company: 'Cloud Solutions Ltd',
-      period: '2022 - 2023',
-      description: 'Architected and deployed scalable cloud solutions on AWS, managed infrastructure as code using Terraform'
+      title: 'Cloud Support Staff',
+      company: 'MMTTC, Ramanujan College, University of Delhi',
+      period: 'Oct 2024 – Mar 2026',
+      description: 'Administered AWS infrastructure (EC2, VPC, security groups, ALB, Auto Scaling) for college ERP and RCMOOCS platform serving 3,000+ concurrent users. Set up CloudWatch monitoring maintaining > 99.5% uptime. Reduced AWS spending by 40% through instance right-sizing and scheduling. Reduced release time from 1 hour to 30 minutes with standardized deployment scripts. Performed regular backups, DR planning with documented RTO/RPO targets.'
     },
     {
-      title: 'Systems Administrator',
-      company: 'IT Services Inc',
-      period: '2021 - 2022',
-      description: 'Managed on-premises and cloud infrastructure, automated deployment processes, improved system reliability'
+      title: 'Research Associate — IT Infrastructure',
+      company: 'TLC, R&D Centre Cell, Ramanujan College, University of Delhi',
+      period: 'Apr 2022 – Aug 2024',
+      description: 'Administered on-premises Linux servers for 3,000+ users. Developed Python and Bash scripts for automated health checks replacing manual monitoring. Performed OS patching, security updates, and service hardening. Managed user accounts, file permissions, and firewall rules. Maintained backups and supported data recovery with minimal downtime.'
     },
     {
-      title: 'Junior IT Support',
-      company: 'Tech Startup',
-      period: '2020 - 2021',
-      description: 'Provided technical support, managed servers, and contributed to infrastructure improvements'
+      title: 'Cloud Support Staff',
+      company: 'MMTTC, Ramanujan College, University of Delhi',
+      period: 'Sep 2024 – May 2026',
+      description: 'Maintained AWS infrastructure for college ERP and RCMOOCS platform. Reduced AWS costs by 40% through resources optimization. Reduced deployment time from 1 hour to 30 minutes using EC2 Autoscaling and load balancing.'
     }
   ];
 

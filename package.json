@@ -21,6 +21,7 @@
   "author": "Manish Kumar",
   "license": "MIT",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "terser": "^5.51.4",
     "vite": "^5.0.8"
   },

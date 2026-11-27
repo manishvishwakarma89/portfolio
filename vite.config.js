@@ -4,6 +4,7 @@ export default defineConfig({
   root: 'src',
   build: {
     outDir: '../dist',
+    emptyOutDir: true,
     minify: 'terser',
     target: 'es2020',
     sourcemap: false,
@@ -21,5 +22,5 @@ export default defineConfig({
     strictPort: false,
     open: false
   },
-  base: '/'
+  base: '/portfolio/'
 })
