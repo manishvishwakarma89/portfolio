@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manish Kumar - Cloud & DevOps Engineer. 3+ years of IT experience, 1.5+ years in Cloud/DevOps. Specializing in infrastructure, automation, and cloud technologies.">
+  <meta name="keywords" content="DevOps, Cloud Engineer, AWS, Kubernetes, Docker, Infrastructure">
+  <meta name="author" content="Manish Kumar">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://manishvishwakarma89.github.io">
+  <meta property="og:title" content="Manish Kumar - Cloud & DevOps Engineer">
+  <meta property="og:description" content="Portfolio showcasing DevOps projects, cloud infrastructure, and technical expertise.">
+  <meta property="og:image" content="https://manishvishwakarma89.github.io/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://manishvishwakarma89.github.io">
+  <meta name="twitter:title" content="Manish Kumar - Cloud & DevOps Engineer">
+  <meta name="twitter:description" content="Portfolio showcasing DevOps projects, cloud infrastructure, and technical expertise.">
+
+  <title>Manish Kumar - Cloud & DevOps Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23007bff'>M</text></svg>">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles/variables.css">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/hero.css">
+  <link rel="stylesheet" href="/styles/sections.css">
+  <link rel="stylesheet" href="/styles/animations.css">
+  <link rel="stylesheet" href="/styles/responsive.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation">
+    <div class="navbar-container">
+      <a href="#" class="navbar-logo">
+        <span class="logo-icon">M</span>
+        <span class="logo-text">anish</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Cloud & DevOps Engineer</h1>
+        <p class="hero-subtitle">Building scalable infrastructure and automating the future</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="https://github.com/manishvishwakarma89" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+      <div id="heroCanvas" class="hero-canvas"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="about-intro">
+              I'm a Cloud & DevOps Engineer with <strong>3+ years of IT experience</strong> and <strong>1.5+ years of hands-on Cloud and DevOps technologies</strong>.
+            </p>
+            <p>
+              My expertise spans infrastructure automation, containerization, cloud platform management, and building reliable, scalable systems. I'm passionate about solving complex infrastructure challenges and implementing best practices in CI/CD, monitoring, and infrastructure-as-code.
+            </p>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-number">3+</span>
+                <span class="stat-label">Years IT Experience</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">1.5+</span>
+                <span class="stat-label">Years Cloud/DevOps</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">30+</span>
+                <span class="stat-label">GitHub Repositories</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline" id="timeline">
+          <!-- Timeline items will be populated from data.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+      <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Skills will be populated from data.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid" id="projectsGrid">
+          <div class="loading-skeleton">Loading repositories...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+      <div class="container">
+        <h2 class="section-title">Resume</h2>
+        <div class="resume-content">
+          <p>Download my resume to learn more about my experience and qualifications.</p>
+          <a href="/resume.pdf" class="btn btn-primary" download>
+            <span class="btn-icon">📄</span>
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 Manish Kumar. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://github.com/manishvishwakarma89" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/mkkumar88" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.05-8.814 0-9.752h3.554v1.381c.43-.665 1.199-1.61 2.919-1.61 2.135 0 3.74 1.398 3.74 4.401v5.58zM5.337 8.855c-1.144 0-1.915-.759-1.915-1.71 0-.955.771-1.71 1.958-1.71 1.187 0 1.914.755 1.939 1.71 0 .951-.752 1.71-1.982 1.71zm1.581 11.597H3.635V9.701h3.283v10.751zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+            </svg>
+          </a>
+          <a href="mailto:manish@example.com" aria-label="Email">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

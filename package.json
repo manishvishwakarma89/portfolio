@@ -1,0 +1,31 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Manish Kumar - Cloud & DevOps Engineer",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:open": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "devops",
+    "cloud",
+    "three.js",
+    "gsap"
+  ],
+  "author": "Manish Kumar",
+  "license": "MIT",
+  "devDependencies": {
+    "terser": "^5.51.4",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "gsap": "^3.12.2",
+    "three": "^0.160.0"
+  }
+}
