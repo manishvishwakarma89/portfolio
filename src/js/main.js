@@ -247,18 +247,13 @@ function loadExperience() {
 
   experiences.forEach((exp, index) => {
     const item = document.createElement('div');
-    item.className = 'timeline-item scroll-reveal';
-    if (index % 2 === 0) {
-      item.classList.add('scroll-reveal-left');
-    } else {
-      item.classList.add('scroll-reveal-right');
-    }
+    item.className = 'timeline-item';
 
     item.innerHTML = `
       <div class="timeline-marker"></div>
-      <div class="timeline-content premium-card glass-effect">
+      <div class="timeline-content">
         <div class="timeline-date">${exp.period}</div>
-        <h3 class="timeline-title premium-text-gradient">${exp.title}</h3>
+        <h3 class="timeline-title">${exp.title}</h3>
         <p class="timeline-company">${exp.company}</p>
         <p class="timeline-description">${exp.description}</p>
       </div>
