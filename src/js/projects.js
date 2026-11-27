@@ -1,107 +1,43 @@
-// GitHub Projects Fetcher
+// Projects - Hardcoded featured projects only
 import { config } from './config.js';
-import { getFromStorage, setToStorage } from './utils.js';
 
 /**
- * Fetch repositories from GitHub API
+ * Return only the 3 featured projects
  */
 export async function fetchGitHubProjects() {
-  const cacheKey = `github-projects-${config.github.username}`;
-  const cached = getFromStorage(cacheKey);
-
-  // Return cached data if available and not expired
-  if (cached && cached.timestamp && Date.now() - cached.timestamp < config.cache.projectsTtl) {
-    return cached.data;
-  }
-
-  try {
-    const url = `${config.github.apiUrl}/users/${config.github.username}/repos?sort=stars&order=desc&per_page=100`;
-    const response = await fetch(url);
-
-    if (!response.ok) {
-      throw new Error(`GitHub API error: ${response.status}`);
-    }
-
-    const repos = await response.json();
-
-    // Filter and format repositories
-    const projects = repos
-      .filter(repo => !repo.fork && !repo.archived) // Exclude forks and archived repos
-      .map(repo => ({
-        id: repo.id,
-        name: repo.name,
-        description: repo.description || 'No description provided',
-        url: repo.html_url,
-        language: repo.language || 'Other',
-        stars: repo.stargazers_count,
-        forks: repo.forks_count,
-        updated: new Date(repo.updated_at).toLocaleDateString(),
-        topics: repo.topics || []
-      }))
-      .sort((a, b) => b.stars - a.stars)
-      .slice(0, 12); // Limit to 12 projects
-
-    // Cache the data
-    setToStorage(cacheKey, {
-      data: projects,
-      timestamp: Date.now()
-    });
-
-    return projects;
-  } catch (error) {
-    console.error('Error fetching GitHub projects:', error);
-    return getFallbackProjects();
-  }
-}
-
-/**
- * Fallback projects (in case API fails)
- */
-function getFallbackProjects() {
   return [
     {
       id: 1,
+      name: 'Three-Tier EcommerceAPP',
+      description: 'End-to-end three-tier e-commerce application deployed on AWS EKS with Terraform-provisioned infrastructure (VPC, subnets, ALB, Auto Scaling). CI/CD pipeline with Jenkins and Argo CD. Kubernetes HPA for auto-scaling, Grafana/Prometheus monitoring, and 99.99% SLA.',
+      url: 'https://github.com/manishvishwakarma89',
+      language: 'JavaScript',
+      stars: 0,
+      forks: 0,
+      updated: '2026',
+      topics: ['aws', 'eks', 'terraform', 'docker', 'kubernetes', 'argocd']
+    },
+    {
+      id: 2,
       name: 'AI-BankAPP',
-      description: 'Banking application with AI-powered features',
+      description: 'AI-powered banking application with intelligent features for modern financial services. Built with cloud-native architecture, containerized deployment, and automated CI/CD pipelines.',
       url: 'https://github.com/manishvishwakarma89/AI-BankAPP',
       language: 'HTML',
       stars: 2,
       forks: 2,
-      updated: '2024-01-15',
-      topics: ['banking', 'ai']
-    },
-    {
-      id: 2,
-      name: 'RCMOOCS-Learning-Management-System',
-      description: 'Learning management system for online courses',
-      url: 'https://github.com/manishvishwakarma89/RCMOOCS-Learning-Management-System',
-      language: 'HTML',
-      stars: 1,
-      forks: 0,
-      updated: '2024-01-10',
-      topics: ['lms', 'education']
+      updated: '2024',
+      topics: ['banking', 'ai', 'cloud']
     },
     {
       id: 3,
-      name: 'simple-django-app',
-      description: 'Simple Django web application',
-      url: 'https://github.com/manishvishwakarma89/simple-django-app',
+      name: 'LensGuard App',
+      description: 'Application security and vulnerability assessment tool. Scans and monitors application infrastructure for security threats, providing real-time alerts and compliance reporting.',
+      url: 'https://github.com/manishvishwakarma89',
       language: 'Python',
       stars: 0,
       forks: 0,
-      updated: '2024-01-05',
-      topics: ['django', 'python', 'web']
-    },
-    {
-      id: 4,
-      name: 'Devops_UtilitiesAPI',
-      description: 'DevOps utilities and automation API',
-      url: 'https://github.com/manishvishwakarma89/Devops_UtilitiesAPI',
-      language: 'Python',
-      stars: 0,
-      forks: 0,
-      updated: '2024-01-01',
-      topics: ['devops', 'automation', 'api']
+      updated: '2026',
+      topics: ['security', 'devops', 'monitoring']
     }
   ];
 }
